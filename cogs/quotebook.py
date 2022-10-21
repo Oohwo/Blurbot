@@ -8,11 +8,12 @@ import os
 from pyairtable import Table
 
 from datetime import datetime
+from pytz import timezone
 import random
 
 AIRTABLE_API_KEY = os.environ.get('AIRTABLE_API_KEY')
 AIRTABLE_BASE_ID = os.environ.get('AIRTABLE_BASE_ID')
-
+tz = timezone('US/Eastern')
 
 class Quotebook(commands.Cog):
     
@@ -24,7 +25,7 @@ class Quotebook(commands.Cog):
     async def new_quote(self, ctx, *, args):
         '''create a new quote'''
         print('hi')
-        quote_timestamp = datetime.now()
+        quote_timestamp = datetime.now(tz)
         quote_timestamp_str = quote_timestamp.strftime("%m᜵%d᜵%y - %I.%M %p")
         quote_msg = args
         if len(quote_msg) > 20:
@@ -57,7 +58,7 @@ class Quotebook(commands.Cog):
     @commands.command()
     async def currently_feeling(self, ctx, *, args):
         '''tell the bot what you're currently feeling and why'''
-        current_feeling_timestamp = datetime.now()
+        current_feeling_timestamp = datetime.now(tz)
         current_feeling_timestamp_str = current_feeling_timestamp.strftime("%m᜵%d᜵%y - %I.%M %p")
         current_feeling = args
         thread = await ctx.channel.create_thread(name=f'Currently feeling {current_feeling} - {current_feeling_timestamp_str}', type=discord.ChannelType.public_thread)
@@ -94,7 +95,7 @@ class Quotebook(commands.Cog):
     @commands.command()
     async def rant(self, ctx):
         '''rant to the bot'''
-        rant_timestamp = datetime.now()
+        rant_timestamp = datetime.now(tz)
         rant_timestamp_str = rant_timestamp.strftime("%m᜵%d᜵%y - %I.%M %p")
         rant_msg = ''
         emoji = '💭'

@@ -11,13 +11,13 @@ class Ping(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         print('------')
-        print(f'Logged in as {self.client.user} (ID: {self.client.user.id})')
+        print(f'Logged in as {self.client.user} (ID: {self.client.user.id}!)')
         print('------')
 
     # commands
     @commands.command()
     async def ping(self, ctx):
-        await ctx.send('pong!')
+        await ctx.send('pong!!')
 
 async def setup(client):
     await client.add_cog(Ping(client))
