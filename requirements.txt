@@ -20,4 +20,4 @@ torch==1.12.1
 typing_extensions==4.3.0
 urllib3==1.26.12
 yarl==1.8.1
-pytz=2022.5
+pytz==2022.5
