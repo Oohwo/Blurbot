@@ -1,4 +1,4 @@
-# fly.toml file generated for blurbot on 2022-10-21T07:14:40-04:00
+# fly.toml file generated for blurbot on 2022-10-21T07:33:25-04:00
 
 app = "blurbot"
 kill_signal = "SIGINT"
@@ -6,7 +6,3 @@ kill_timeout = 5
 processes = []
 
 [env]
-
-[experimental]
-  allowed_public_ports = []
-  auto_rollback = true
