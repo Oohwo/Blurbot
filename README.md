@@ -1,4 +1,4 @@
-[# Blurbot
+# Blurbot
 
 ## Description
 "Blurbot" is a Discord bot written in Python to keep track of my rants, blurbs, and timely shenanigans.
