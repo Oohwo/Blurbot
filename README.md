@@ -1,4 +1,4 @@
-# Blurbot
+[# Blurbot
 
 ## Description
 "Blurbot" is a Discord bot written in Python to keep track of my rants, blurbs, and timely shenanigans.
@@ -52,3 +52,4 @@ I wrote this because I don't want to burden my friends with rambling my mouth of
 ## Credits
 - I'm sorry to all the friends who hear me rant all the time about X :(
 - Inspired by [Purdue Hackers' Nightcrawler!](https://github.com/purduehackers/night-crawler)
+](https://github.com/Oohwo/BlurbBot)
